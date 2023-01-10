@@ -1,0 +1,15 @@
+{
+  "newFileLocation": "current",
+  "newLinkFormat": "relative",
+  "attachmentFolderPath": "Attachement",
+  "userIgnoreFilters": [
+    "*.pyc",
+    "*.class",
+    ".idea/*",
+    "*.so",
+    "target/*"
+  ],
+  "showUnsupportedFiles": true,
+  "alwaysUpdateLinks": true,
+  "readableLineLength": false
+}

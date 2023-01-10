@@ -1,0 +1,39 @@
+- [ ] 新的淘宝店规划(@2023-01-17)
+- [ ] 面试总结，准备一套面试的算法题
+- [ ] 如何建设自己团队的工程师文化   (@2023-02-01 10:00:00)
+- [ ] 工作居住证确认一下能不能续 (@2023-01-09 10:00:00)  
+
+
+- [ ] Theories
+	- [ ] Machine Learning
+	- [ ] Deep Learning
+	- [ ] Math
+- [ ] Language
+	- [ ] Python
+	- [ ] Java
+	- [ ] Scala
+	- [ ] Go
+	- [ ] C++
+- [ ] Big Data
+	- [ ] Flink
+	- [ ] Spark
+	- [ ] Kafka
+	- [ ] Hadoop
+	- [ ] Hive
+	- [ ] HBase
+	- [ ] Livy
+	- [ ] Zookeeper
+- [ ] Statistics
+	- [ ] Matlab
+	- [ ] R
+	- [ ] Sas
+	- [ ] Stata
+	- [ ] Eviews
+	- [ ] Julia
+	- [ ] ...
+- [ ] Database
+	- [ ] MySQL
+	- [ ] MongoDB
+	- [ ] InfluxDB
+	- [ ] ES
+	- [ ] Redis

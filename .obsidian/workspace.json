@@ -1,0 +1,221 @@
+{
+  "main": {
+    "id": "ea695acb09fb0077",
+    "type": "split",
+    "children": [
+      {
+        "id": "5d653f8f01ce393f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c6e9c8f410388076",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Todo.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d43334814678df45",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tools/Maven/Maven常用命令.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a3d29cc449147df5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Big Data/Flink/配置Flink IDE开发环境.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9aaae74e0de8d617",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Big Data/Flink/Flink FAQ.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f0fc8125698d1bc8",
+    "type": "split",
+    "children": [
+      {
+        "id": "bae0e5522a4c780a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8bcd31247bc90183",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3d5d935368d0fd5c",
+            "type": "leaf",
+            "state": {
+              "type": "online.larslockefeer.obsidian-plugin-todo",
+              "state": {}
+            }
+          },
+          {
+            "id": "4a6abe109b754609",
+            "type": "leaf",
+            "state": {
+              "type": "reminder-list",
+              "state": {}
+            }
+          },
+          {
+            "id": "284b5a75fd8b843a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "path: maven",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "141511e85328ec83",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "537c9d2b3987cb20",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Big Data/Flink/Flink FAQ.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 377.5
+  },
+  "right": {
+    "id": "dc8c6a75b5bdb2a6",
+    "type": "split",
+    "children": [
+      {
+        "id": "6798d050556bcd8f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5661e1bf32e7fdb7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Big Data/Flink/Flink FAQ.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ab13eb7408fed5a5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Big Data/Flink/Flink FAQ.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "cb129804fa764773",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 357.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "random-note:开始漫游笔记": false
+    }
+  },
+  "active": "9aaae74e0de8d617",
+  "lastOpenFiles": [
+    "Big Data/Flink/配置Flink IDE开发环境.md",
+    "Tools/Maven/Maven pom文件.md",
+    "Tools/Maven/Maven常用命令.md",
+    "Todo.md",
+    "Todo/Todo-Work.md",
+    "Todo/Todo-Study.md",
+    "Work/讨论——年前制定好排期.md",
+    "Language/Python/basic/多线程与多进程/mtsleepB.py",
+    "Language/Python/basic/多线程与多进程/mtsleepA.py",
+    "Language/Python/basic/多线程与多进程/一篇文章搞定Python多进程(全) - 知乎.md"
+  ]
+}

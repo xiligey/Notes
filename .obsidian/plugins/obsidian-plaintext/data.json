@@ -1,0 +1,18 @@
+{
+  "destroyOtherPlugins": false,
+  "extensions": [
+    "py",
+    "scala",
+    "java",
+    "c",
+    "cpp",
+    "go",
+    "xml",
+    "rb",
+    "ipynb",
+    "sh",
+    "class",
+    "r",
+    "m"
+  ]
+}
