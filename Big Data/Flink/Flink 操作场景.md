@@ -142,7 +142,7 @@ docker-compose exec kafka kafka-console-consumer.sh \
 
 [Back to top](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#top)
 
-## 核心特性探索 [#](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#%e6%a0%b8%e5%bf%83%e7%89%b9%e6%80%a7%e6%8e%a2%e7%b4%a2)
+## 核心特性探索 
 
 到目前为止，你已经学习了如何与 Flink 以及 Docker 容器进行交互，现在让我们看一些常用的操作命令。 本节中的各部分命令不需要按任何特定的顺序执行，这些命令大部分都可以通过 [CLI](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#flink-cli) 或 [RESTAPI](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#flink-rest-api) 执行。
 
