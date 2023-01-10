@@ -26,7 +26,7 @@ Apache Flink 可以以多种方式在不同的环境中部署，抛开这种多�
 
 [Back to top](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#top)
 
-## 环境搭建 [#](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#%e7%8e%af%e5%a2%83%e6%90%ad%e5%bb%ba)
+## 环境搭建
 
 环境搭建只需要几步就可以完成，我们将会带你过一遍必要的操作命令， 并说明如何验证我们正在操作的一切都是运行正常的。
 
@@ -76,11 +76,11 @@ operations-playground_zookeeper_1              /bin/sh -c /usr/sbin/sshd  ...   
 docker-compose down -v
 ```
 
-## 环境讲解 [#](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#%e7%8e%af%e5%a2%83%e8%ae%b2%e8%a7%a3)
+## 环境讲解
 
 在这个搭建好的环境中你可以尝试和验证很多事情，在下面的两个部分中我们将向你展示如何与 Flink 集群进行交互以及演示并讲解 Flink 的一些核心特性。
 
-### Flink WebUI 界面 [#](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#flink-webui-%e7%95%8c%e9%9d%a2)
+### Flink WebUI 界面
 
 观察Flink集群首先想到的就是 Flink WebUI 界面：打开浏览器并访问 [http://localhost:8081](http://localhost:8081/)，如果一切正常，你将会在界面上看到一个 TaskManager 和一个处于 “RUNNING” 状态的名为 _Click Event Count_ 的 Job。
 
@@ -88,7 +88,7 @@ docker-compose down -v
 
 Flink WebUI 界面包含许多关于 Flink 集群以及运行在其上的 Jobs 的有用信息，比如：JobGraph、Metrics、Checkpointing Statistics、TaskManager Status 等等。
 
-### 日志 [#](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#%e6%97%a5%e5%bf%97)
+### 日志
 
 **JobManager**
 
@@ -110,7 +110,7 @@ docker-compose logs -f taskmanager
 
 TaskManager 刚启动完成之时，你同样会看到很多关于 checkpoint completion (检查点完成)的日志。
 
-### Flink CLI [#](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#flink-cli)
+### Flink CLI 
 
 [Flink CLI](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/deployment/cli/) 相关命令可以在 client 容器内进行使用。 比如，想查看 Flink CLI 的 `help` 命令，可以通过如下方式进行查看：
 
@@ -118,7 +118,7 @@ TaskManager 刚启动完成之时，你同样会看到很多关于 checkpoint co
 docker-compose run --no-deps client flink --help
 ```
 
-### Flink REST API [#](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#flink-rest-api)
+### Flink REST API
 
 [Flink REST API](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/ops/rest_api/#api) 可以通过本机的 `localhost:8081` 进行访问，也可以在 client 容器中通过 `jobmanager:8081` 进行访问。 比如，通过如下命令可以获取所有正在运行中的 Job：
 
@@ -126,7 +126,7 @@ docker-compose run --no-deps client flink --help
 curl localhost:8081/jobs
 ```
 
-### Kafka Topics [#](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#kafka-topics)
+### Kafka Topics
 
 可以运行如下命令查看 Kafka Topics 中的记录：
 
@@ -146,7 +146,7 @@ docker-compose exec kafka kafka-console-consumer.sh \
 
 到目前为止，你已经学习了如何与 Flink 以及 Docker 容器进行交互，现在让我们看一些常用的操作命令。 本节中的各部分命令不需要按任何特定的顺序执行，这些命令大部分都可以通过 [CLI](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#flink-cli) 或 [RESTAPI](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#flink-rest-api) 执行。
 
-### 获取所有运行中的 Job [#](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#%e8%8e%b7%e5%8f%96%e6%89%80%e6%9c%89%e8%bf%90%e8%a1%8c%e4%b8%ad%e7%9a%84-job)
+### 获取所有运行中的 Job
 
 CLI
 
@@ -170,11 +170,11 @@ REST API
 
 一旦 Job 提交，Flink 会默认为其生成一个 JobID，后续对该 Job 的 所有操作（无论是通过 CLI 还是 REST API）都需要带上 JobID。
 
-### Job 失败与恢复 [#](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#job-%e5%a4%b1%e8%b4%a5%e4%b8%8e%e6%81%a2%e5%a4%8d)
+### Job 失败与恢复
 
 在 Job (部分)失败的情况下，Flink 对事件处理依然能够提供精确一次的保障， 在本节中你将会观察到并能够在某种程度上验证这种行为。
 
-#### Step 1: 观察输出 [#](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#step-1-%e8%a7%82%e5%af%9f%e8%be%93%e5%87%ba)
+#### Step 1: 观察输出
 
 如[前文](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#anatomy-of-this-playground)所述，事件以特定速率生成，刚好使得每个统计窗口都包含确切的 1000 条记录。 因此，你可以实时查看 output topic 的输出，确定失败恢复后所有的窗口依然输出正确的统计数字， 以此来验证 Flink 在 TaskManager 失败时能够成功恢复，而且不丢失数据、不产生数据重复。
 
@@ -185,7 +185,7 @@ docker-compose exec kafka kafka-console-consumer.sh \
   --bootstrap-server localhost:9092 --topic output
 ```
 
-#### Step 2: 模拟失败 [#](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#step-2-%e6%a8%a1%e6%8b%9f%e5%a4%b1%e8%b4%a5)
+#### Step 2: 模拟失败
 
 为了模拟部分失败故障，你可以 kill 掉一个 TaskManager，这种失败行为在生产环境中就相当于 TaskManager 进程挂掉、TaskManager 机器宕机或者从框架或用户代码中抛出的一个临时异常（例如，由于外部资源暂时不可用）而导致的失败。
 
@@ -203,7 +203,7 @@ docker-compose kill taskmanager
 
 与此同时，数据生成器 (data generator) 一直不断地往 _input_ topic 中生成 `ClickEvent` 事件，在生产环境中也经常出现这种 Job 挂掉但源头还在不断产生数据的情况。
 
-#### Step 3: 失败恢复 [#](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#step-3-%e5%a4%b1%e8%b4%a5%e6%81%a2%e5%a4%8d)
+#### Step 3: 失败恢复
 
 一旦 TaskManager 重启成功，它将会重新连接到 JobManager。
 
@@ -217,7 +217,7 @@ docker-compose up -d taskmanager
 
 > **注意**：在大部分生产环境中都需要一个资源管理器 (Kubernetes、Yarn)对 失败的 Job 进行自动重启。
 
-### Job 升级与扩容 [#](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#job-%e5%8d%87%e7%ba%a7%e4%b8%8e%e6%89%a9%e5%ae%b9)
+### Job 升级与扩容
 
 升级 Flink 作业一般都需要两步：第一，使用 [Savepoint](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/ops/state/savepoints/) 优雅地停止 Flink Job。 Savepoint 是整个应用程序状态的一次快照（类似于 checkpoint ），该快照是在一个明确定义的、全局一致的时间点生成的。第二，从 Savepoint 恢复启动待升级的 Flink Job。 在此，“升级”包含如下几种含义：
 
@@ -232,7 +232,7 @@ docker-compose exec kafka kafka-console-consumer.sh \
   --bootstrap-server localhost:9092 --topic output
 ```
 
-#### Step 1: 停止 Job [#](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#step-1-%e5%81%9c%e6%ad%a2-job)
+#### Step 1: 停止 Job
 
 要优雅停止 Job，需要使用 JobID 通过 CLI 或 REST API 调用 “stop” 命令。 JobID 可以通过[获取所有运行中的 Job](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#listing-running-jobs) 接口或 Flink WebUI 界面获取，拿到 JobID 后就可以继续停止作业了：
 
@@ -270,7 +270,7 @@ total 0
 
 REST API
 
-#### Step 2a: 重启 Job (不作任何变更) [#](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#step-2a-%e9%87%8d%e5%90%af-job-%e4%b8%8d%e4%bd%9c%e4%bb%bb%e4%bd%95%e5%8f%98%e6%9b%b4)
+#### Step 2a: 重启 Job (不作任何变更)
 
 现在你可以从这个 Savepoint 重新启动待升级的 Job，为了简单起见，不对该 Job 作任何变更就直接重启。
 
@@ -295,7 +295,7 @@ REST API
 
 一旦该 Job 再次处于 `RUNNING` 状态，你将从 _output_ Topic 中看到数据在快速输出， 因为刚启动的 Job 正在处理停止期间积压的大量数据。另外，你还会看到在升级期间 没有产生任何数据丢失：所有窗口都在输出 1000。
 
-#### Step 2b: 重启 Job (修改并行度) [#](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#step-2b-%e9%87%8d%e5%90%af-job-%e4%bf%ae%e6%94%b9%e5%b9%b6%e8%a1%8c%e5%ba%a6)
+#### Step 2b: 重启 Job (修改并行度)
 
 在从 Savepoint 重启 Job 之前，你还可以通过修改并行度来达到扩容 Job 的目的。
 
@@ -328,7 +328,7 @@ docker-compose scale taskmanager=2
 
 一旦 Job 再次运行起来，从 _output_ Topic 的输出中你会看到在扩容期间数据依然没有丢失： 所有窗口的计数都正好是 1000。
 
-### 查询 Job 指标 [#](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#%e6%9f%a5%e8%af%a2-job-%e6%8c%87%e6%a0%87)
+### 查询 Job 指标
 
 可以通过 JobManager 提供的 REST API 来获取系统和用户[指标](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/ops/metrics/)
 
@@ -541,7 +541,7 @@ curl localhost:8081/jobs/<jod-id>
 
 [Back to top](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#top)
 
-## 延伸拓展 [#](https://nightlies.apache.org/flink/flink-docs-release-1.16/zh/docs/try-flink/flink-operations-playground/#%e5%bb%b6%e4%bc%b8%e6%8b%93%e5%b1%95)
+## 延伸拓展
 
 你可能已经注意到了，_Click Event Count_ 这个 Job 在启动时总是会带上 `--checkpointing` 和 `--event-time` 两个参数， 如果我们去除这两个参数，那么 Job 的行为也会随之改变。
 
