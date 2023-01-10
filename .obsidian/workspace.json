@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/损失函数.md",
+                "file": "Machine Learning/广义线性模型/普通最小二乘法.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -88,7 +88,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/损失函数.md"
+                "file": "Machine Learning/广义线性模型/普通最小二乘法.md"
               }
             }
           }
@@ -112,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/损失函数.md",
+                "file": "Machine Learning/广义线性模型/普通最小二乘法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/损失函数.md",
+                "file": "Machine Learning/广义线性模型/普通最小二乘法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,6 +167,8 @@
   },
   "active": "e7a54edf7ec80ed4",
   "lastOpenFiles": [
+    "Machine Learning/广义线性模型/逻辑回归.md",
+    "Machine Learning/损失函数.md",
     "Machine Learning/广义线性模型/普通最小二乘法.md",
     "Todo.md",
     "Tools/Maven/Maven常用命令.md",
@@ -174,8 +176,6 @@
     "Big Data/Flink/Flink FAQ.md",
     "Big Data/Flink/Flink 操作场景.md",
     "Tools/Maven/Maven pom文件.md",
-    "Todo/Todo-Work.md",
-    "Todo/Todo-Study.md",
-    "Work/讨论——年前制定好排期.md"
+    "Todo/Todo-Work.md"
   ]
 }
